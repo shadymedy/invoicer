@@ -12,8 +12,7 @@
 */
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('invoices/create', 'InvoicesController@create')->name('invoices.create');
-    Route::post('invoices/store', 'InvoicesController@store')->name('invoices.store');
+    Route::resource('invoices', 'InvoicesController');
 });
 
 Route::get('/', function () {

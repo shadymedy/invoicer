@@ -38,4 +38,9 @@ class InvoicesController extends Controller
             }
         }
     }
+
+    public function show($invoice_id) {
+        $invoice = Invoice::findOrFail($invoice_id);
+        return view('invoices.show', compact('invoice'));
+    }
 }
