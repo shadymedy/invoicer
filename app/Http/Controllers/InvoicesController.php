@@ -9,4 +9,8 @@ class InvoicesController extends Controller
     public function create() {
         return view('invoices.create');
     }
+
+    public function store(Request $request) {
+        return $request->all();
+    }
 }
